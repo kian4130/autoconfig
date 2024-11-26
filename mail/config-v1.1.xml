@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clientConfig xmlns="urn:mozilla:params:xml:config">
+    <emailProvider id="kianleonard.net"> <!-- Change this to your email domain -->
+        <!-- Optional: Display name for the email provider -->
+        <displayName>Kian Leonard</displayName> <!-- Change this to your preferred display name -->
+
+        <!-- Incoming Mail Server (IMAP or POP3) -->
+        <incomingServer type="imap"> <!-- Use "imap" for IMAP or "pop3" for POP3 -->
+            <hostname>heracles.mxrouting.net</hostname> <!-- Change to your actual IMAP server address -->
+            <port>993</port> <!-- Use 993 for IMAP with SSL/TLS, or 995 for POP3 with SSL -->
+            <ssl>true</ssl> <!-- Set to true if SSL/TLS is required, otherwise set to false -->
+            <authentication>password-cleartext</authentication> <!-- Authentication type, typically "password-cleartext" -->
+        </incomingServer>
+
+        <!-- Outgoing Mail Server (SMTP) -->
+        <outgoingServer type="smtp">
+            <hostname>heracles.mxrouting.net</hostname> <!-- Change to your actual SMTP server address -->
+            <port>587</port> <!-- Port for SMTP (587 is common for TLS, or use 465 for SSL) -->
+            <ssl>true</ssl> <!-- Set to true if SSL/TLS is required, otherwise set to false -->
+            <authentication>password-cleartext</authentication> <!-- Authentication type, typically "password-cleartext" -->
+        </outgoingServer>
+    </emailProvider>
+</clientConfig>
+
